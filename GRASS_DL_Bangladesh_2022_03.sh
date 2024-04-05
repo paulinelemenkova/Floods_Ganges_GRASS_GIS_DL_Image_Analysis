@@ -61,7 +61,7 @@ d.out.file output=Bangladesh_2022_M_reject format=jpg --overwrite
 # MACHINE LEARNING
 g.region raster=L8_2022_M_01 -p
 # Generate training pixels from an older land cover classification:
-r.random input=L8_2022_M_cluster_classes seed=100 npoints=1000 raster=training_pixels --overwrite
+r.random input=L8_2014_M_cluster_classes seed=100 npoints=1000 raster=training_pixels --overwrite
 # Create the imagery group with all Landsat-8 OLI/TIRS bands:
 i.group group=L8_2022_M input=L8_2022_M_01,L8_2022_M_02,L8_2022_M_03,L8_2022_M_04,L8_2022_M_05,L8_2022_M_06,L8_2022_M_07 --overwrite
 # Use training pixels to perform a classification on recent Landsat image:
